@@ -1,0 +1,6 @@
+@Website_tour_Be_HostAddress = http://localhost:5261
+
+GET {{Website_tour_Be_HostAddress}}/corn/travel
+Accept: application/json
+
+###

@@ -1,0 +1,136 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<link rel="stylesheet" href="~/css/tours/tourdetail.css">
+
+
+<body>
+    <div class="container">
+        <div id="tourDetail">
+            <div class="tour-header">
+                <h1 class="tour-title"></h1>
+                
+                
+            </div>
+
+            <div class="image-gallery">
+                <div class="main-image-container">
+                    <img src="" alt="" class="main-image">
+                </div>
+                <div class="thumbnail-box">
+                    <div class="thumbnail-container">
+                        <!-- Thumbnails will be added here -->
+                    </div>
+                </div>
+              
+                <button class="prev-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.3 1.3a1 1 0 0 1 0 1.4L5.4 8l5.9 5.3a1 1 0 0 1-1.4 1.4l-7-6.3a1 1 0 0 1 0-1.4l7-6.3a1 1 0 0 1 1.4 0z" />
+                    </svg>
+                </button>
+                <button class="next-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.7 1.3a1 1 0 0 0 0 1.4L10.6 8 4.7 13.3a1 1 0 0 0 1.4 1.4l7-6.3a1 1 0 0 0 0-1.4l-7-6.3a1 1 0 0 0-1.4 0z" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <div class="tour-route">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="route-text"></span>
+            </div>
+            <p class="tour-code"></p>
+            <div class="slideShow-dots">
+                <span class="rating-label">Đánh giá:</span>
+                <span class="slideShow-dot active" data-index="0"></span>
+                <span class="slideShow-dot" data-index="1"></span>
+                <span class="slideShow-dot" data-index="2"></span>
+                <span class="slideShow-dot" data-index="3"></span>
+                <span class="slideShow-dot" data-index="4"></span>
+            </div>
+            <div class="tour-info">
+                <div class="tour-description">
+                    <h2 class="section-title">Thông tin tour: </h2>
+                    <p class="description-text"></p>
+
+                    <h3 class="section-title">Điểm nổi bật: </h3>
+                    <p class="highlights-text"></p>
+
+                    <div class="includes-excludes">
+                        <div class="includes">
+                            <h3 class="h3">Dịch vụ bao gồm: </h3>
+                            <p class="includes-text"></p>
+                        </div>
+                        <div class="excludes">
+                            <h3 class="h3">Dịch vụ không bao gồm: </h3>
+                            <p class="excludes-text"></p>
+                        </div>
+                    </div>
+
+                    <div class="itinerary">
+                        <h2 class="section-title">Lịch trình :</h2>
+                        <div class="itinerary-list"></div>
+                    </div>
+
+
+                    <div class="notes">
+                        <h2 class="section-title">Thông tin cần lưu ý *</h2>
+                        <p class="notes-text"></p>
+                    </div>
+                </div>
+                <div class="booking-card">
+                    <h2 class="section-title">Đặt tour: </h2>
+
+                    <!-- Hiển thị giá cho người lớn -->
+                    <div class="price">
+                        <strong>Giá người lớn: </strong>
+                        <span class="price-value"></span> VNĐ
+                    </div>
+
+                    <!-- Hiển thị giá cho trẻ em -->
+                    <div class="childprice">
+                        <strong>Giá trẻ em: </strong>
+                        <span class="child-price-value"></span> VNĐ
+                    </div>
+
+                    <!-- Hiển thị số chỗ còn lại -->
+                    <div class="available-seats">
+                        <strong>Số chỗ còn lại: </strong>
+                        <span class="seats-available-value"></span>
+                    </div>
+
+                    <!-- Chọn ngày khởi hành -->
+                    <div class="departure-dates">
+                        <label for="departureSelect">Chọn ngày khởi hành:</label>
+                        <select id="departureSelect" class="date-select">
+                            <!-- Các lựa chọn ngày khởi hành sẽ được thêm vào từ API -->
+                        </select>
+                    </div>
+
+                    <!-- Chọn số lượng vé -->
+                    <div class="ticket-quantity">
+                        <label for="ticketQuantity">Số lượng vé:</label>
+                        <input type="number" id="ticketQuantity" class="ticket-quantity-input" min="1" max="10" value="1">
+                    </div>
+
+                    <button class="book-button">Đặt ngay</button>
+                </div>
+
+
+
+
+                
+            </div>
+           
+        </div> 
+        
+    </div>
+
+</body>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/tours/tourdetail.js"></script>

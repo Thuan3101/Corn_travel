@@ -1,0 +1,59 @@
+﻿
+
+    <title>Trang CornTravel | Tour  Travel</title>
+    @* <img src="~/image/luxtrip&stay.jpg" /> *@
+    <link rel="icon" type="image/png" href="/image/logo.png" sizes="32x32" />
+
+    <link rel="stylesheet" href="~/css/home/index.css">
+
+
+<main>
+    <div class="container">
+        <div class="image-container">
+            <img src="~/image/head.jpg" alt="Description of image" class="img1">
+            <div class="overlay-text">
+                <h1 class="t1">Corn travel</h1>
+                <p class="t1">Thỏa sức vì khám phá</p>
+                <div>
+                    <input class="txt1" type="text" id="searchDestination" placeholder="Bạn muốn đi đâu" />
+                </div>
+                <div>
+                    <input type="text" id="searchDeparture" placeholder="Khởi hành từ TP Hồ Chí Minh" />
+                    <a  class="btn btn-all-tab" id="searchBtn">Tìm kiếm</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Kết quả tìm kiếm -->
+        <div id="searchResultsContainer" class="tours-searchResult" >
+            <h2>Kết quả tìm kiếm</h2>
+            <div class="tours-list" id="searchResults">
+                <!-- Kết quả tìm kiếm sẽ được hiển thị tại đây -->
+            </div>
+        </div>
+
+        <!-- Danh sách tour -->
+        <div id="toursContainer" class="tours-container">
+            <div class="tour-category" id="domesticToursContainer">
+                <h2>Tour trong nước</h2>
+                <div class="tours-list" id="domesticTours"></div>
+                <a href="/tours/domestic" class="btn btn-all-tab" id="viewAllDomestic">Xem tất cả</a>
+            </div>
+            <div class="tour-category" id="internationalToursContainer">
+                <h2>Tour ngoài nước</h2>
+                <div class="tours-list" id="internationalTours"></div>
+                <a href="/tours/international" class="btn btn-all-tab" id="viewAllInternational">Xem tất cả</a>
+            </div>
+            <div class="tour-category" id="combinedToursContainer">
+                <h2>Tour kết hợp</h2>
+                <div class="tours-list" id="combinedTours"></div>
+                <a href="/tours/combine" class="btn btn-all-tab" id="viewAllCombined">Xem tất cả</a>
+            </div>
+        </div>
+        <div id="tourDetailContainer" class="tour-detail"></div>
+    </div>
+</main>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/home/index.js"></script>

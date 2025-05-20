@@ -1,0 +1,109 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewBag.Title = "Admin TourManagement";
+}
+
+<link rel="stylesheet" href="/css/areas/admin/tourmanagement/addtours.css" />
+
+<div class="addtour-container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <a href="/admin/tourmanagement/tours" class="btn btn-back">Quay lại</a>
+            <h2 class="h2">Thêm tour</h2>
+            <form asp-action="AddTour" method="post" enctype="multipart/form-data">
+                <div id="tourForm" class="form-group row">
+                    <label class="col-sm-2 col-form-label">Tên tour</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="name" placeholder="Tên tour">
+                    </div>
+                </div>
+                <div class="form-group
+                        row">
+                    <label class="col-sm-2 col-form-label">Mô tả</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" name="description" placeholder="Mô tả"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Giá</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-price" name="price" placeholder="Giá">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Ảnh</label>
+
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" name="image" placeholder="Ảnh">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Ngày khởi hành</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control-small" name="start_date" placeholder="Ngày khởi hành">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Ngày kết thúc</label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control-small" name="end_date" placeholder="Ngày kết thúc">
+                    </div>
+                </div>
+                @* Tong ngay khoi hanh va ngay ket thuc *@
+                <div class=" from-group row">
+                    <label class="col-sm-2 col-form-label">Tổng ngày</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-sumday" name="total_day" placeholder="Tổng ngày">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Số lượng</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control-sumday" name="availableSeats" placeholder="Số lượng">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Điểm xuất phát</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="start_point" placeholder="Điểm xuất phát">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Điểm đến</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="end_point" placeholder="Điểm đến">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Loại tour</label>
+                    <div class="col-sm-10">
+                        <select class="form-control-small" name="type">
+                            <option value="1">Tour trong nước</option>
+                            <option value="2">Tour ngoài nước</option>
+                            <option value="3">Tour kết hợp</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="btn">
+                        <button type="submit" class="btn btn-primary">Thêm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/areas/admin/tourmanagemnt/addtours.js"></script>

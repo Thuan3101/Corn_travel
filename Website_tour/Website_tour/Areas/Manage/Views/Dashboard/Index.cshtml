@@ -1,0 +1,184 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    ViewBag.Title = "Admin Dashboard";
+
+}
+
+<link rel="stylesheet" href="/css/areas/admin/dashboard/dashboard.css" />
+
+
+<nav class="navbar">
+    <h2>Admin Dashboard</h2>
+</nav>
+
+<div class="container">
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Tổng số người dùng</h4>
+                    <p>100</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Tổng số tour</h4>
+                    <p>50</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Doanh thu</h4>
+                    <p>$10,000</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Doanh thu hàng tháng</h4>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Top 5 tour được đặt nhiều nhất</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tên tour</th>
+                                <th>Số lượt đặt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Đà Nẵng</td><td>100</td></tr>
+                            <tr><td>Hà Nội</td><td>90</td></tr>
+                            <tr><td>Hồ Chí Minh</td><td>80</td></tr>
+                            <tr><td>Nha Trang</td><td>70</td></tr>
+                            <tr><td>Phú Quốc</td><td>60</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Top 5 tour được yêu thích nhất</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tên tour</th>
+                                <th>Số lượt yêu thích</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Đà Nẵng</td><td>100</td></tr>
+                            <tr><td>Hà Nội</td><td>90</td></tr>
+                            <tr><td>Hồ Chí Minh</td><td>80</td></tr>
+                            <tr><td>Nha Trang</td><td>70</td></tr>
+                            <tr><td>Phú Quốc</td><td>60</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Top 5 tour được đánh giá cao nhất</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tên tour</th>
+                                <th>Điểm đánh giá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Đà Nẵng</td><td>5</td></tr>
+                            <tr><td>Hà Nội</td><td>4.9</td></tr>
+                            <tr><td>Hồ Chí Minh</td><td>4.8</td></tr>
+                            <tr><td>Nha Trang</td><td>4.7</td></tr>
+                            <tr><td>Phú Quốc</td><td>4.6</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Top 5 người dùng đặt tour nhiều nhất</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Tên người dùng</th>
+                                <th>Số lượt đặt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Nguyễn Văn A</td><td>100</td></tr>
+                            <tr><td>Nguyễn Văn B</td><td>90</td></tr>
+                            <tr><td>Nguyễn Văn C</td><td>80</td></tr>
+                            <tr><td>Nguyễn Văn D</td><td>70</td></tr>
+                            <tr><td>Nguyễn Văn E</td><td>60</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        @* Payments thanh toán như thế nào qua đâu thẻ hay tiền mặt hay app   *@
+
+        <div class="grid-item">
+            <div class="card">
+                <div class="card-body">
+                    <h4>Thanh toán bằng hình thức nào </h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Hình thức thanh toán</th>
+                                <th>Số lượt thanh toán</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Thẻ</td><td>100</td></tr>
+                            <tr><td>Tiền mặt</td><td>90</td></tr>
+                            <tr><td>App</td><td>80</td></tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+@* <script src="~/js/error.js"></script> *@
+<script src="~/js/areas/admin/dashboard/dashboard.js"></script>

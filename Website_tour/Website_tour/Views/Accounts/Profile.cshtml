@@ -1,0 +1,94 @@
+﻿<link rel="stylesheet" href="~/css/auth/profile.css" />
+
+<div class="container mt-5">
+    <h2 class="text-center">Hồ Sơ Người Dùng</h2>
+
+    <!-- Hiện thị thông tin người dùng -->
+    <div id="userInfo">
+        <p><strong>Tên:</strong> <span id="displayFirstName"></span></p>
+        <p><strong>Họ:</strong> <span id="displayLastName"></span></p>
+        <p><strong>Số điện thoại:</strong> <span id="displayPhoneNumber"></span></p>
+        <p><strong>Địa chỉ:</strong> <span id="displayAddress"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Ngày sinh:</strong> <span id="displayBirthDate"></span></p>
+        <p><strong>Giới tính:</strong> <span id="displayGender"></span></p>
+        <button id="editProfileBtn" class="btn btn-primary">Chỉnh sửa</button>
+    </div>
+
+    <!-- Form chỉnh sửa hồ sơ -->
+    <form id="profileForm" style="display: none;">
+        <div class="form-group">
+            <label for="firstName">Tên:</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Nhập tên" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Họ:</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Nhập họ" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Số điện thoại:</label>
+            <input type="tel" class="form-control" id="phoneNumber" placeholder="Nhập số điện thoại" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Địa chỉ:</label>
+            <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Nhập email" required>
+        </div>
+        <div class="form-group">
+            <label for="birthDate">Ngày sinh:</label>
+            <input type="date" class="form-control" id="birthDate" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Giới tính:</label>
+            <Select class="form-control gender>" id="gender">
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+             </Select>  
+            @* <input type="text" class="form-control" id="gender" placeholder="Nhập giới tính" required> *@
+        </div>
+        <div class="form-group">
+            <label for="oldPassword">Mật khẩu cũ:</label>
+            <input type="password" class="form-control" id="oldPassword" placeholder="Nhập mật khẩu cũ " required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Cập nhật hồ sơ</button>
+        <button type="button" id="cancelEditBtn" class="btn btn-secondary">Hủy</button>
+    </form>
+
+    <hr>
+
+
+    <!-- Nút "Đổi mật khẩu" -->
+    <button class="btn-setpassword" id="togglePasswordForm">Đổi mật khẩu</button>
+
+
+    <!-- Form chỉnh sửa hồ sơ (ẩn ban đầu) -->
+    <form id="changePasswordForm" style="display: none;"> <!-- Ẩn form ban đầu -->
+        <h3 class="mt-5">Đổi Mật Khẩu</h3>
+        <!-- Thông báo đổi mật khẩu -->
+    <div id="changePasswordMessage"></div>
+
+        <div class="form-group">
+            <label for="oldPassword">Mật khẩu cũ:</label>
+            <input type="password" class="form-control" id="oldPassword1" placeholder="Nhập mật khẩu cũ" required>
+        </div>
+        <div class="form-group">
+            <label for="newPassword">Mật khẩu mới:</label>
+            <input type="password" class="form-control" id="newPassword" placeholder="Nhập mật khẩu mới" required>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Xác nhận mật khẩu:</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Xác nhận mật khẩu" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Đổi mật khẩu</button>
+    </form>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/accounts/profile.js"></script>

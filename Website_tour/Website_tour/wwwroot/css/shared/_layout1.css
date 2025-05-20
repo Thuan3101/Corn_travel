@@ -1,0 +1,60 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: auto;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh; /* Đảm bảo container chiếm hết chiều cao màn hình */
+}
+
+.sidebar {
+    font-size: 20px;
+    width: 200px; /* Độ rộng của sidebar */
+    background-image: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100%);
+    color: white; /* Màu chữ */
+    padding: 20px; /* Khoảng cách nội dung */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa theo chiều ngang */
+}
+
+.sidebar-header {
+    text-align: center; /* Căn giữa chữ Admin */
+    margin-bottom: 30px; /* Khoảng cách giữa header và menu */
+}
+
+    .sidebar-header h2 {
+        margin: 0;
+        color: #fff;
+    }
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Để menu chiếm toàn bộ chiều rộng */
+    text-align: center; /* Căn giữa chữ trong menu */
+}
+
+    .sidebar-menu li {
+        margin: 10px 0;
+    }
+
+    .sidebar-menu a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block; /* Giữ nguyên kích thước của các liên kết */
+        width: 100%;
+        padding: 10px 0; /* Khoảng cách bên trong liên kết */
+    }
+
+        .sidebar-menu a:hover {
+            text-decoration: underline;
+        }
+
+.main-content {
+    flex-grow: 1; /* Phần chính sẽ chiếm không gian còn lại */
+    padding: 20px; /* Khoảng cách nội dung */
+    background-color: aqua; /* Màu nền chính */
+}

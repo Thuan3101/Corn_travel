@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CornTravel - Manage </title>
+    <script src="~/js/error.js"></script>
+    <link rel="stylesheet" href="/css/shared/_layout1.css">
+</head>
+
+<body>
+    <header>
+        <div class="admin-container">
+            <!-- Sidebar -->
+            <nav class="sidebar">
+                <div class="sidebar-header">
+                    <a href="/home/index">
+                        <h2>Manage</h2>
+                    </a>
+                </div>
+                <ul class="sidebar-menu">
+                    <li><a href="/manage/dashboard/index">Dashboard</a></li>
+                    
+                    <li><a href="/manage/tourmanagement/tours">Tour Management</a></li>
+                    <li><a href="/manage/settings/index">Settings</a></li>
+                    <li><a href="/manage/reports/index">Reports</a></li>
+                    <li><a href="/manage/support/index">Support</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                @RenderBody()
+            </div>
+        </div>
+    </header>
+</body>
+
+
+</html>

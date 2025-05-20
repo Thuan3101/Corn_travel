@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>CornTravel | Tour & Travel</title>
+    <link rel="icon" type="image/png" href="/image/logo.png" sizes="32x32" />
+    <link rel="stylesheet" href="/css/shared/_layout.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="/home/index">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/website-tour-1cf29.appspot.com/o/Test%2FLuxTrip%26Stay.jpg?alt=media&token=da684179-7216-481e-9da5-4405071dca41" alt="Logo" />
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a>Danh mục</a>
+                        <ul class="dropdown-content">
+                            <li><a href="/tours/domestic">Tour trong nước</a></li>
+                            <li><a href="/tours/international">Tour ngoài nước</a></li>
+                            <li><a href="/tours/combine">Tour kết hợp</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/home/index">Trang chủ</a></li>
+                    <li><a href="/home/contact">Liên hệ</a></li>
+                    <li id=" booking">
+                        <a href="/booking/booking">
+                            <img src="~/image/booking.png" alt="Booking" style="width: 40px; height: 40px;">
+                        </a>
+                    </li>
+
+                    <!--nut xac thuc neu như admin hoac manage-->
+                    <li id="adminNavItem" style="display: none;"></li>
+                     <!-- Thong tin tai khoan -->
+                    <li id="accountInfo" style="display: none;">
+                        <a href="/accounts/profile">
+                            <!-- Chuyển hướng đến trang profile -->
+                            <img src="~/image/user.png" alt="User" style="width: 30px; height: 30px;">
+                        </a>
+                    </li>
+
+                    <li id="loginLogoutBtn"><a href="javascript:void(0);" onclick="openModal()"><img src="~/image/login1.png" alt="Đăng nhập" style="width: 30px; height: 30px;"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+
+
+    <!-- Form Đăng Nhập -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Đăng nhập</h2>
+            <form action="/home/login" method="post">
+                <label for="email">Tài khoản:</label>
+                <input type="text" id="loginEmail" name="email" required>
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="loginPassword" name="password" required>
+                <button type="submit">Đăng nhập</button>
+                <a href="/accounts/forget">Quên mật khẩu?</a>
+                <a href="/accounts/register">Đăng ký</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div id="left">
+            <h1 class="LH">Liên hệ</h1>
+            <p>Địa chỉ: Thành phố Hồ Chí Minh</p>
+            <p>Điện thoại: 0123456789</p>
+            <p>Email: <a href="mailto:corntravel@gmail.com">corntravel@gmail.com</a></p>
+        </div>
+        <div id="center">
+            <h1>Trung tâm</h1>
+            <p>Thông tin trung tâm</p>
+        </div>
+        <div id="right">
+            <h1>Phải</h1>
+            <p>Thông tin bên phải</p>
+        </div>
+    </footer>
+
+    @RenderSection("Scripts", required: false)
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/shared/login.js"></script> 
+
+    
+</body>
+</html>

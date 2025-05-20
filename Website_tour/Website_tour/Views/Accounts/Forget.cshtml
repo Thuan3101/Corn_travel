@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<link rel="stylesheet" href="~/css/auth/forget.css" />
+<main>
+    <div class="forget-container">
+        <div class="forget">
+            <h1 class="h1">Quên mật khẩu?</h1>
+        </div>
+        <form id="forgetForm" class="login">
+            <label for="emailOrPhone">Email để khôi phục: <span class="required">*</span></label>
+            <input type="text" id="emailOrPhone" name="emailOrPhone" required placeholder="nhập email để khôi phục" />
+            <button id="sendOtpBtn" class="btn-sendotp" type="button">Gửi mã</button>
+
+            <label for="otpCode" class="otp-field" style="display:none;">Mã OTP: <span class="required">*</span></label>
+            <input type="text" id="otpCode" name="otpCode" class="otp-field" style="display:none;" required />
+
+            <label for="password" class="otp-field" style="display:none;">Mật khẩu mới: <span class="required">*</span></label>
+            <input type="password" id="password" name="password" class="otp-field" style="display:none;" required />
+
+            <label for="repassword" class="otp-field" style="display:none;">Nhập lại mật khẩu: <span class="required">*</span></label>
+            <input type="password" id="repassword" name="repassword" class="otp-field" style="display:none;" required />
+
+            <button id="updatePasswordBtn" class="btn-send otp-field" type="submit" style="display:none;">Cập nhật</button>
+        </form>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/accounts/forget.js"></script>
+</main>

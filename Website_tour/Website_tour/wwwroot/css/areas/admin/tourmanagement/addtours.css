@@ -1,0 +1,61 @@
+﻿.addtour-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .addtour-container h2 {
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center; /* Căn giữa chữ Thêm tour */
+    }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        font-weight: bold;
+        color: #555;
+    }
+
+.form-control,
+.form-control-price,
+.form-control-small,
+.form-control-sumday {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+    .form-control:focus,
+    .form-control-price:focus,
+    .form-control-small:focus,
+    .form-control-sumday:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+/* Căn giữa nút thêm */
+.btn {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto; /* Căn giữa nút */
+    display: block; /* Đảm bảo nút được căn giữa */
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }

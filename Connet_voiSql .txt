@@ -1,0 +1,45 @@
+Bỏ csdl vào
+
+Scaffold-DbContext "Data Source=DESKTOP-C7UMFRB\MINHTHUAN;Initial Catalog=ToursStoress;Integrated Security=True;Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+Scaffold-DbContext "Data Source=DESKTOP-C7UMFRB\MINHTHUAN;Initial Catalog=ToursStoress;User ID=sa;Password=1234567890;Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Data Source=DESKTOP-C7UMFRB\MINHTHUAN;Initial Catalog=ToursStoress;Integrated Security=True;Trust Server Certificate=True
+
+
+Data Source=DESKTOP-C7UMFRB\\MINHTHUAN;Initial Catolog=ToursStoress; User ID=sa; Password=1234567890; TrustServerCertificate=True
+
+
+
+Kết nối bằng tay code
+
+Data Source=DESKTOP-C7UMFRB\\MINHTHUAN; Database=ToursStoress; User ID=sa; Password=1234567890; TrustServerCertificate=True
+
+
+
+"ConnectionStrings": {
+  "ToursStore": "Data Source=DESKTOP-C7UMFRB\\MINHTHUAN; Database=ToursStoress; User ID=sa; Password=1234567890; TrustServerCertificate=True"
+}
+Có thể kết nối với MariaDB:
+Server=localhost; Database=ToursStoress; user=root;password=root;
+
+
+gõ lệnh:
+Add-Migration DbTours
+Update-Database 
+ 
+-Tạo thêm table
+Add-Migration ProductsTable
+Update-Database  
+
+Xóa csdl
+drop-database
+Sửa csdl
+
+Add-Migration UpdateUsers
+Add-Migration UpdateTables
+
+Remove-Migration
+
+Update-Database 

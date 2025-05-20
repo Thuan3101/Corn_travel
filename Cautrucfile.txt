@@ -1,0 +1,136 @@
+YourProjectName
+├── Controllers
+│   ├── HomeController.cs
+│   ├── TourController.cs
+│   ├── UserController.cs
+│   └── AdminController.cs
+├── Data
+│   ├── ToursContext.cs
+│   └── Migrations
+│       └── InitialCreate.cs
+├── Models
+│   ├── Tour.cs
+│   ├── User.cs
+│   ├── Category.cs
+│   └── Role.cs
+├── Views
+│   ├── Tour
+│   │   ├── Index.cshtml
+│   │   ├── Details.cshtml
+│   │   ├── Create.cshtml
+│   │   └── Edit.cshtml
+│   ├── Shared
+│   │   └── _Layout.cshtml
+│   └── Home
+│       └── Index.cshtml
+├── wwwroot
+│   ├── css
+│   ├── js
+│   └── images
+└── Program.cs
+
+
+————————————————————————-
+
+MyMvcProject/
+│
+├── Controllers/
+│   ├── BookingsController.cs
+│   ├── UsersController.cs
+│   ├── RolesController.cs
+│   ├── ToursController.cs
+│   ├── PaymentsController.cs
+│   ├── ReviewsController.cs
+│   └── TourTypesController.cs
+│
+├── Models/
+│   ├── Booking.cs
+│   ├── User.cs
+│   ├── Role.cs
+│   ├── Tour.cs
+│   ├── Payment.cs
+│   ├── Review.cs
+│   └── TourType.cs  # Model cho TourTypes
+│
+├── Views/
+│   ├── Bookings/
+│   │   ├── Index.cshtml
+│   │   ├── Create.cshtml
+│   │   └── Edit.cshtml
+│   ├── Users/
+│   │   ├── Index.cshtml
+│   │   ├── Create.cshtml
+│   │   └── Edit.cshtml
+│   ├── Roles/
+│   │   ├── Index.cshtml
+│   │   ├── Create.cshtml
+│   │   └── Edit.cshtml
+│   ├── Tours/
+│   │   ├── Index.cshtml
+│   │   ├── Create.cshtml
+│   │   └── Edit.cshtml
+│   ├── Payments/
+│   │   ├── Index.cshtml
+│   │   ├── Create.cshtml
+│   │   └── Edit.cshtml
+│   ├── Reviews/
+│   │   ├── Index.cshtml
+│   │   ├── Create.cshtml
+│   │   └── Edit.cshtml
+│   └── TourTypes/
+│       ├── Index.cshtml  # Hiển thị các loại tour
+│       ├── Create.cshtml # Tạo mới loại tour
+│       └── Edit.cshtml   # Chỉnh sửa loại tour
+│
+├── Data/
+│   └── ApplicationDbContext.cs
+│
+├── Migrations/
+│   └── {Các tệp migration được tạo ra sau khi chạy lệnh Add-Migration và Update-Database}
+│
+├── wwwroot/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── appsettings.json
+├── Program.cs
+├── Startup.cs
+└── MyMvcProject.csproj
+
+
+
+————————————————————————
+
+- Controllers
+  - BookingsController.cs
+  - UsersController.cs
+  - RolesController.cs
+  - ToursController.cs
+  - PaymentsController.cs
+  - ReviewsController.cs
+- Models
+  - Booking.cs
+  - User.cs
+  - Role.cs
+  - Tour.cs
+  - Payment.cs
+  - Review.cs
+- Data
+  - ApplicationDbContext.cs
+- Services
+  - IBookingService.cs
+  - IUserService.cs
+  - ITourService.cs
+  - IPaymentService.cs
+  - IReviewService.cs
+  - BookingService.cs
+  - UserService.cs
+  - TourService.cs
+  - PaymentService.cs
+  - ReviewService.cs
+- Migrations
+  - {các tệp migration}
+
+----------------------------------------------------------------------------------
+

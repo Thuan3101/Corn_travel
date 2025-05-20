@@ -1,0 +1,80 @@
+﻿
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Chiều cao của main, có thể điều chỉnh */
+
+    background-image: linear-gradient(to left top, #00FFFF, #7FFFD4);
+    background-size: cover; /* Đảm bảo ảnh nền bao phủ toàn bộ */
+    background-position: center; /* Căn giữa ảnh nền */
+}
+.forget-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+.forget {
+    margin-top:10px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.required {
+    color: red; /* Màu sắc của dấu * */
+    font-weight: bold; /* Đậm */
+}
+.login {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.h1{
+    font-size: 3rem;
+    color:red;
+}
+    .login label {
+        margin-bottom: 0.5rem;
+    }
+
+    .login input {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+.btn-sendotp {
+    font-size: 14px;
+    background-color: red;
+    width: 80px;
+    height: 30px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius:5px;
+}
+
+    .btn-sendotp:hover {
+        background-color: darkred;
+    }
+
+.btn-send {
+    margin: auto;
+    width: 150px;
+    height: 40px;
+    padding: 0.75rem;
+    border: none;
+    background-color: #f4a261;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .btn-send:hover {
+        background-color: #e76f51;
+    }
